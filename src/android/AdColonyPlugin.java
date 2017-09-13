@@ -60,6 +60,7 @@ public class AdColonyPlugin extends CordovaPlugin {
 			
 			appID = args.getString(0);
 			rewardedVideoAdZoneId = args.getString(1);
+			userId = args.getString(2);
 			setup();
             return true;
         }
@@ -94,7 +95,7 @@ public class AdColonyPlugin extends CordovaPlugin {
 				public void run() {
 				
 					app_options = new AdColonyAppOptions()
-							.setUserID( "123456789" );
+							.setUserID( userId );
 					AdColony.configure(cordova.getActivity(), app_options, appID, rewardedVideoAdZoneId); 
 					rewardListener = new AdColonyRewardListener() {
 						@Override
