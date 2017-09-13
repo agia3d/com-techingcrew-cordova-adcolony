@@ -12,6 +12,7 @@ import com.adcolony.sdk.*;
 public class AdColonyPlugin extends CordovaPlugin {
     protected String appID;
 	protected String interstitialAdZoneId;
+	protected String userId;
 	protected String rewardedVideoAdZoneId;
 	private CallbackContext callbackContext;
 	private AdColonyInterstitial ad;
